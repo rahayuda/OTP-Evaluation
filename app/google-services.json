@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1083717578381",
+    "project_id": "one-time-password-a3b87",
+    "storage_bucket": "one-time-password-a3b87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083717578381:android:fe95c257f69508c9a97cc4",
+        "android_client_info": {
+          "package_name": "com.example.otp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDcvcXItXkdAc1teKFCStIfx1iABb8flY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
