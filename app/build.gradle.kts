@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.otp"
-        minSdk = 23
+        minSdk = 29
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -20,7 +20,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -33,6 +33,8 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+        languageVersion = "2.1"  // Menggunakan Kotlin versi terbaru
+        apiVersion = "2.1"       // Menggunakan Kotlin versi terbaru
     }
 }
 
@@ -45,8 +47,20 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
+    // Firebase BOM untuk mengelola versi dependensi Firebase secara otomatis
+    implementation(platform("com.google.firebase:firebase-bom:33.8.0"))
+
+    // Firebase dependensi
     implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-auth-ktx:23.0.0") // Versi terbaru
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.20")
+    implementation("com.google.firebase:firebase-auth-ktx:23.1.0")
+
+    // Kotlin standar library dengan versi terbaru
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.1.0")
+
+    // Google Play Services
+    implementation("com.google.android.gms:play-services-auth:21.3.0")
+    implementation("com.google.android.gms:play-services-measurement-api:22.2.0")
+
+    // Profile Installer untuk optimasi
+    implementation("androidx.profileinstaller:profileinstaller:1.4.1")
 }
